@@ -24,21 +24,30 @@ var sun = document.createElement("div");
 sun.className = "sun";
 $('.view').append(sun);
 
-// var y = 0
-// while (y <= 5) {
-// var ray = document.createElement("div");
-// ray.className = "ray-" + y;
-// sun.appendChild(ray);
-// y++
-// }
+var y = 0
+while (y <= 5) {
+var ray = document.createElement("div");
+ray.className = "ray-" + y;
+$('.sun').append(ray);
+y++
+}
 
 // var mountain = document.createElement("div");
 // mountain.className = "mountain";
 // view.appendChild(mountain);
 
+var mountain = document.createElement("div");
+console.log(mountain);
+mountain.className = "mountain";
+$('.view').append(mountain);
+
 // var mountaintop = document.createElement("div");
 // mountaintop.className = "mountain-top";
 // mountain.appendChild(mountaintop);
+
+var mountaintop = document.createElement("div");
+mountaintop.className = "mountain-top";
+$('.mountain').append(mountaintop);
 
 // var baseMC = 'mountain-cap-';
 // var i = 0;
