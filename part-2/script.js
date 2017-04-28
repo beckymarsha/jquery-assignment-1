@@ -24,13 +24,19 @@ for (i = 0; i <= 195; i++) {
     $('body').append(box);
     box = boxes[i];
     box.addEventListener('click', function () {
-        if (this.className === "box") {
+        if (this.className === "type-1") {
             this.className = "clicked";
         } else {
-            this.className = "box";
+            this.className = "type-1";
         }
 
+        if (this.className === "type-2") {
+            this.className = "clicked";
+        } else {
+            this.className = "type-2";
+        }
     });
+
 }
 
 
@@ -67,20 +73,3 @@ for (i = 0; i <= 195; i++) {
 
 
 
-// 1. All the divs created in step 3 will be appended to the document body.
-
-// 1. Add an [click] event listener on all the created `box` divs in step 3 and 4. **Important**: You cannot do this with any type of loop.
-
-
-// **NOTE**: Remember, you're producing this HTML using jQuery. You cannot edit any file other than the `script.js` file.
-
-// ### The HTML page should produce an image like so:
-
-// ![output](./output.gif)
-
-// [`for`]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for
-// [append]: https://api.jquery.com/append/
-// [click]: https://api.jquery.com/click/
-// [createElement]: https://api.jquery.com/jQuery/#creating-new-elements
-// [fork]: https://github.com/karbassi-id/jQuery-assignment-1/fork
-// [jQuery]: https://jquery.com
