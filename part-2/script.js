@@ -14,25 +14,25 @@ type1.className = "type-1";
 type2 = document.getElementsByClassName('type-2');
 type2.className = "type-2";
 
-
-
-
-for (i = 0; i <= 196; i++) {
+for (i = 0; i <= 195; i++) {
 
     var box = document.createElement("div");
     box.className = "box";
-    $('body').append(box);
-    box = boxes[i];
 
     $('.box:odd').addClass('type-2');
     $('.box:even').addClass('type-1');
+    $('body').append(box);
+    box = boxes[i];
+    box.addEventListener('click', function () {
+        if (this.className === "box") {
+            this.className = "clicked";
+        } else {
+            this.className = "box";
+        }
 
-
+    });
 }
 
-console.log("Total number of boxes: " + boxes.length)
-console.log("Total number of type-1: " + type1.length)
-console.log("Total number of type-2: " + type2.length)
 
 
 
@@ -66,12 +66,6 @@ console.log("Total number of type-2: " + type2.length)
 // }
 
 
-
-//    1. All the divs will have a class of `box`.
-
-//    1. All even-numbered divs will _also_ have the class of `type-1`.
-
-//    1. All odd-numbered divs will _also_ have the class of `type-2`.
 
 // 1. All the divs created in step 3 will be appended to the document body.
 
