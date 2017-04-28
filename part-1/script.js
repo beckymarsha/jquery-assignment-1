@@ -49,22 +49,16 @@ var mountaintop = document.createElement("div");
 mountaintop.className = "mountain-top";
 $('.mountain').append(mountaintop);
 
-// var baseMC = 'mountain-cap-';
-// var i = 0;
-// do {
-//     i += 1;
-//     var result = document.createElement('div');
-//     result.className = baseMC + i;
-//     mountaintop.appendChild(result);
-// } while (i < 4);
+var baseMC = 'mountain-cap-';
+var i = 0;
+do {
+    i += 1;
+    var result = document.createElement('div');
+    result.className = baseMC + i;
+    $('.mountain-top').append(result);
+} while (i < 4);
 
 
-// var poop = document.createElement('img');
-// poop.src = './poop.png';
-// poop.id = 'poop';
-// poop.onload = function() {
-//     mountaintop.appendChild(poop);
-// };
 
 
 
