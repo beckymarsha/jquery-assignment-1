@@ -8,24 +8,31 @@
 
 boxes = document.getElementsByClassName('box');
 
+type1 = document.getElementsByClassName('type-1');
+type1.className = "type-1";
+
+type2 = document.getElementsByClassName('type-2');
+type2.className = "type-2";
+
+
+
 
 for (i = 0; i <= 196; i++) {
 
     var box = document.createElement("div");
     box.className = "box";
     $('body').append(box);
+    box = boxes[i];
 
-    // box = boxes[i];
+    $('.box:odd').addClass('type-2');
+    $('.box:even').addClass('type-1');
 
-    // box.addEventListener('click', function () {
-    //     if (this.className === "box") {
-    //         this.className = "clicked";
-    //     } else {
-    //         this.className = "box";
-    //     }
-    }
+
+}
+
 console.log("Total number of boxes: " + boxes.length)
-
+console.log("Total number of type-1: " + type1.length)
+console.log("Total number of type-2: " + type2.length)
 
 
 
